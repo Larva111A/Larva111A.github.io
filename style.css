@@ -64,11 +64,11 @@ body {
     transition: font-size 0.2s, color 0.2s, text-shadow 0.2s; /* Group transitions */
 }
 
-.bi-github, .bi-instagram, .bi-tiktok, .bi-whatsapp, .bi-discord {
+.bi-github, .bi-instagram, .bi-tiktok, .bi-whatsapp, .bi-discord, .bi-snapchat {
     transition: font-size 0.2s;
 }
 
-.bi-github:hover, .bi-instagram:hover, .bi-tiktok:hover, .bi-whatsapp:hover, .bi-discord:hover {
+.bi-github:hover, .bi-instagram:hover, .bi-tiktok:hover, .bi-whatsapp:hover, .bi-discord:hover, .bi-snapchat:hover {
     font-size: 28px;
 }
 
@@ -95,12 +95,19 @@ body {
 }
 
 .bi-discord:hover {
-    background-image: linear-gradient(45deg, #0008ff, #7a7eff, #ffffff);
+    transform: scale(1.2);
+    background-image: linear-gradient(45deg, #7289DA, #99AAB5, #FFFFFF);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    text-shadow: 0 0 5px rgba(0, 8, 255, 0.5), 0 0 10px rgba(0, 8, 255, 0.3);
 }
 
+.bi-snapchat:hover {
+    transform: scale(1.2);
+    color: #FFFC00; /* Bright yellow, Snapchat brand color */
+    text-shadow: 0 0 10px rgba(255, 252, 0, 0.7), 0 0 20px rgba(255, 252, 0, 0.5);
+}
 
 /* Parte dos cards */
 .pageCards {
