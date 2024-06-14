@@ -64,11 +64,11 @@ body {
     transition: font-size 0.2s, color 0.2s, text-shadow 0.2s; /* Group transitions */
 }
 
-.bi-github, .bi-instagram, .bi-tiktok, .bi-whatsapp {
+.bi-github, .bi-instagram, .bi-tiktok, .bi-whatsapp, .bi-discord {
     transition: font-size 0.2s;
 }
 
-.bi-github:hover, .bi-instagram:hover, .bi-tiktok:hover, .bi-whatsapp:hover {
+.bi-github:hover, .bi-instagram:hover, .bi-tiktok:hover, .bi-whatsapp:hover, .bi-discord:hover {
     font-size: 28px;
 }
 
@@ -93,6 +93,14 @@ body {
     -webkit-background-clip: text;
     color: transparent;
 }
+
+.bi-discord:hover {
+    background-image: linear-gradient(45deg, #0008ff, #7a7eff, #ffffff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
 
 /* Parte dos cards */
 .pageCards {
