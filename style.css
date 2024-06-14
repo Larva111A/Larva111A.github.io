@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -9,14 +10,13 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-family: Arial, sans-serif; /* Ensure consistent font rendering */
 }
 
 /* Parte de cima do site */
-
 .pageTop {
     margin: 3rem 0 1rem 0;
     text-align: center;
@@ -27,11 +27,11 @@ body {
 }
 
 .pageTop img {
-    border-radius: 100%;
+    border-radius: 50%; /* Use 50% for a perfect circle */
     width: 120px;
-    box-shadow: 0px 4px 8px #000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Add transparency to shadow */
     margin-bottom: 1rem;
-    transition: .5s;
+    transition: width 0.5s;
 }
 
 .pageTop img:hover {
@@ -49,46 +49,52 @@ body {
 }
 
 /* Parte dos ícones */
-
 .pageIcons {
     text-align: center;
     display: flex;
     justify-content: center;
     gap: 1.5rem;
+    margin-bottom: 2rem; /* Add some space below the icons */
 }
 
 .pageIcons a {
     text-decoration: none;
     color: #fff;
     font-size: 26px;
-    transition: .2s;
+    transition: font-size 0.2s, color 0.2s, text-shadow 0.2s; /* Group transitions */
 }
 
-.iconGithub, .iconInstagram, .iconTiktok {
-    transition: .2s;
+.bi-github, .bi-instagram, .bi-tiktok, .bi-whatsapp {
+    transition: font-size 0.2s;
 }
 
-.iconGithub:hover, .iconInstagram:hover, .iconTiktok:hover {
+.bi-github:hover, .bi-instagram:hover, .bi-tiktok:hover, .bi-whatsapp:hover {
     font-size: 28px;
 }
 
-.iconGithub:hover {
+.bi-github:hover {
     color: #000;
 }
 
-.iconInstagram:hover {
+.bi-instagram:hover {
     background-image: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45);
-    background-clip: border-box;
+    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
 }
 
-.iconTiktok:hover {
+.bi-tiktok:hover {
     text-shadow: -1px -1px 0 #69C9D0, 1px 1px 0 #F56040;
 }
 
-/* Parte dos cards */
+.bi-whatsapp:hover {
+    background-image: linear-gradient(45deg, #25D366, #128C7E, #075E54);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
 
+/* Parte dos cards */
 .pageCards {
     margin-top: 2rem;
     display: flex;
@@ -99,13 +105,18 @@ body {
 }
 
 .card {
-    border-radius: 100vh;
+    border-radius: 50px; /* Adjusted for aesthetic roundness */
     background-color: #3dba6f;
     font-weight: 600;
-    border-color: transparent;
+    border: none;
     width: 700px;
-    transition: .3s;
+    transition: transform 0.3s, background-color 0.3s; /* Added transform for hover effect */
     min-height: 6vh;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+    background-color: #34a357; /* Darken background on hover */
 }
 
 .card-body {
@@ -114,13 +125,13 @@ body {
     justify-content: space-between;
     align-items: center;
     min-height: 6vh;
-    transition: .5s;
+    transition: all 0.5s; /* Simplified transition property */
 }
 
 .card-text {
     text-decoration: none;
     color: #fff;
-    transition: .5s;
+    transition: font-size 0.5s;
 }
 
 .card-text:hover {
@@ -129,36 +140,35 @@ body {
 
 .card img {
     width: 50px;
-    border-radius: 100%;
+    border-radius: 50%; /* Use 50% for a perfect circle */
 }
 
 .btn {
     font-weight: 600;
-    border-radius: 100vh;
-    transition: .5s;
+    border-radius: 50px; /* Adjusted for aesthetic roundness */
+    transition: background-color 0.5s, color 0.5s;
 }
 
-.copied {
+.btn:hover {
     background-color: #279754;
     color: #fff;
 }
 
 /* Parte de baixo */
-
 footer {
     text-align: center;
-    margin-bottom: 2rem;
-    margin-top: 1rem;
+    margin: 1rem 0 2rem;
 }
 
 footer a {
-    transition: .3s;
+    transition: font-size 0.3s;
 }
 
 footer a:hover {
     font-size: 17px;
 }
 
+/* Media Queries */
 @media (max-width: 750px) {
     .card {
         width: 500px;
@@ -191,4 +201,11 @@ footer a:hover {
     footer a:hover {
         font-size: 15px;
     }
+}
+
+/* Accessibility Considerations */
+.pageIcons a:focus,
+.btn:focus {
+    outline: 2px solid #000;
+    outline-offset: 2px;
 }
