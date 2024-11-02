@@ -5,7 +5,8 @@
 }
 
 body {
-    background-image: linear-gradient(to bottom, #2a6447, #1cfc77 50%, #B5EAD7, #D5F5E3);
+    /* Gradiente atualizado: começa em azul (#0000FF) e termina em branco (#FFFFFF) */
+    background-image: linear-gradient(to bottom, #0000FF, #87CEFA, #FFFFFF);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -13,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-family: Arial, sans-serif; /* Ensure consistent font rendering */
+    font-family: Arial, sans-serif;
 }
 
 /* Parte de cima do site */
@@ -27,9 +28,9 @@ body {
 }
 
 .pageTop img {
-    border-radius: 50%; /* Use 50% for a perfect circle */
+    border-radius: 50%;
     width: 120px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Add transparency to shadow */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
     margin-bottom: 1rem;
     transition: width 0.5s;
 }
@@ -54,14 +55,14 @@ body {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-    margin-bottom: 2rem; /* Add some space below the icons */
+    margin-bottom: 2rem;
 }
 
 .pageIcons a {
     text-decoration: none;
     color: #fff;
     font-size: 26px;
-    transition: font-size 0.2s, color 0.2s, text-shadow 0.2s; /* Group transitions */
+    transition: font-size 0.2s, color 0.2s, text-shadow 0.2s;
 }
 
 .bi-github, .bi-instagram, .bi-tiktok, .bi-whatsapp, .bi-discord, .bi-snapchat {
@@ -105,7 +106,7 @@ body {
 
 .bi-snapchat:hover {
     transform: scale(1.2);
-    color: #FFFC00; /* Bright yellow, Snapchat brand color */
+    color: #FFFC00;
     text-shadow: 0 0 10px rgba(255, 252, 0, 0.7), 0 0 20px rgba(255, 252, 0, 0.5);
 }
 
@@ -120,18 +121,18 @@ body {
 }
 
 .card {
-    border-radius: 50px; /* Adjusted for aesthetic roundness */
-    background-color: #3dba6f;
+    border-radius: 20px;
+    background-color: #5A8BB0; /* Azul mais suave */
     font-weight: 600;
     border: none;
     width: 700px;
-    transition: transform 0.3s, background-color 0.3s; /* Added transform for hover effect */
+    transition: transform 0.3s, background-color 0.3s;
     min-height: 6vh;
 }
 
 .card:hover {
-    transform: scale(1.05); /* Slightly enlarge the card on hover */
-    background-color: #34a357; /* Darken background on hover */
+    transform: scale(1.05);
+    background-color: #507D9A; /* Azul um pouco mais escuro no hover */
 }
 
 .card-body {
@@ -140,7 +141,7 @@ body {
     justify-content: space-between;
     align-items: center;
     min-height: 6vh;
-    transition: all 0.5s; /* Simplified transition property */
+    transition: all 0.5s;
 }
 
 .card-text {
@@ -155,18 +156,21 @@ body {
 
 .card img {
     width: 50px;
-    border-radius: 50%; /* Use 50% for a perfect circle */
+    border-radius: 50%;
 }
 
 .btn {
     font-weight: 600;
-    border-radius: 50px; /* Adjusted for aesthetic roundness */
-    transition: background-color 0.5s, color 0.5s;
+    border-radius: 50px;
+    color: #fff; /* Texto branco */
+    background-color: #5A8BB0; /* Azul do botão */
+    border: none; /* Remove borda verde */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .btn:hover {
-    background-color: #279754;
-    color: #fff;
+    background-color: #FFFFFF; /* Fundo branco no hover */
+    color: #5A8BB0; /* Texto azul no hover */
 }
 
 /* Parte de baixo */
@@ -218,7 +222,7 @@ footer a:hover {
     }
 }
 
-/* Accessibility Considerations */
+/* Considerações de Acessibilidade */
 .pageIcons a:focus,
 .btn:focus {
     outline: 2px solid #000;
